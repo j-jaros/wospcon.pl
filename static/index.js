@@ -1,5 +1,5 @@
 window.onload = async () => {
-    const hidden_by_default = document.querySelectorAll('.hidden, .stitle *')
+    const hidden_by_default = document.querySelectorAll('.hidden, .stitle *, .hidden-content')
     console.log(hidden_by_default)
     hidden_by_default.forEach((el) => scroll_observer.observe(el))
 }
@@ -7,13 +7,14 @@ window.onload = async () => {
 
 const scroll_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.5) {
-            entry.target.classList.replace("hidden", 'visible-1')
+        if (entry.intersectionRatio >= 0.4) {
+            entry.target.classList.replace("hidden", 'visible')
+            entry.target.classList.replace("hidden-content", 'hidden-content-show')
         } else {
             //entry.target.classList.replace("visible", 'hidden')
         }
     });
-}, {threshold: 0.5});
+}, {threshold: 0.4});
 history.scrollRestoration = 'manual';
 
 const anchors = document.querySelectorAll('.section-anchor')
@@ -35,16 +36,25 @@ anchors.forEach((anchor) => {
 })
 
 
-// image loop
-async function l1() {
-    const e = document.getElementById('image1')
+async function countdown() {
+    const target = new Date("01/19/2024 10:00")
+
+    const day_holder = document.querySelector("#until .digits td:first-of-type")
+    const hour_holder = document.querySelector("#until .digits td:nth-of-type(2)")
+    const minutes_holder = document.querySelector("#until .digits td:nth-of-type(3)")
+    const seconds_holder = document.querySelector("#until .digits td:nth-of-type(4)")
+
     while (true) {
-        for (const i of imgs) {
-            e.style.backgroundImage = `url("/static/${i}")`
-            await new Promise(r => setTimeout(r, 2000))
-            console.log('zmieniam')
-        }
+        const diff = target - new Date()
+
+        day_holder.textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hour_holder.textContent = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutes_holder.textContent = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        seconds_holder.textContent = Math.floor((diff % (1000 * 60)) / 1000);
+
+        await new Promise(r=>setTimeout(r, 1000))
+
     }
 }
 
-l1()
+countdown()

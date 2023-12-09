@@ -18,10 +18,16 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-
+        <div id="org_only_info">
+            <span>
+                Aktualnie strona jest dostępna wyłącznie dla wglądu organizatorów. Jeśli tutaj trafiłeś/aś przypadkowo, gratulacje! ;)
+                Wróć za kilka dni, a zastaniesz w pełni gotową stronę<br>
+                ~ Julian
+            </span>
+        </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <span>WOŚP~CON 2024 </span>
+                <span>WOŚP~CON 2024</span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -30,39 +36,32 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Start</a>
+                            <a class="nav-link active" aria-current="page" href="#start">Start</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sekcja 1</a>
+                            <a class="nav-link" href="#section1">Sekcja 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lokalizacja</a>
+                            <a class="nav-link" href="#location">Lokalizacja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Program</a>
+                            <a class="nav-link" href="#program">Program</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Organizatorzy</a>
+                            <a class="nav-link" href="#orgs">Organizatorzy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sponsorzy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Wystawcy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Regulaminy i zgody</a>
+                            <a class="nav-link" href="#documents">Regulaminy i zgody</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="col-lg-12 welcome_section">
+        <div class="col-lg-12 welcome_section" id="start">
             <h1 class="hidden">WOŚP~CON 2024</h1>
             <div id="w_text_wrapper">
-                <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem delectus error id
-                    illum</p>
+                <p class="hidden">( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)</p>
             </div>
             <div id="until" class="hidden">
                 <span>Do rozpoczęcia wydarzenia pozostało:</span>
@@ -86,115 +85,117 @@
 
     <!--sekcja przykladowa-->
     <section class="row">
-        <div class="col-lg-12 stitle">
-            <h1>LOREM IPSUM</h1>
-            <span>lorem ipsum OwO</span>
+        <div class="col-lg-12 stitle" id="section1">
+            <h1>Czym jest WOŚP~CON?</h1>
+            <span>lorem ipsum</span>
         </div>
         <div class="col-lg-6 desc">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi ducimus ea eaque illum laborum odio
+            <h1 class="hidden">Lorem ipsum</h1>
+            <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi ducimus ea eaque illum
+                laborum odio
                 qui tempora ut. Accusamus alias corporis esse saepe. Animi beatae culpa id neque unde. Lorem ipsum dolor
                 sit amet, consectetur adipisicing elit. Ducimus eius enim est eum iste maxime qui quos sint. Corporis
                 debitis error eveniet ipsam itaque magnam maiores numquam quaerat quis ullam?</p>
         </div>
-        <div class="col-lg-6 img" id="image1"></div>
+        <div class="col-lg-6 img">
+            <img src="/static/plakat1.png">
+        </div>
     </section>
 
     <!-- info o lokalizacji wydarzenia-->
     <section class="row">
-        <div class="col-lg-12 stitle">
+        <div class="col-lg-12 stitle" id="location">
             <h1>LOKALIZACJA</h1>
             <span>lorem ipsum</span>
         </div>
-        <div class="col-lg-6 desc ">
+        <div class="col-lg-6 desc">
             <h1 class="hidden">Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus est odit repudiandae. A architecto
+            <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus est odit repudiandae. A
+                architecto
                 atque, eius eveniet expedita explicabo in labore minus modi mollitia neque non obcaecati
                 praesentium,
                 provident voluptate.</p>
         </div>
         <div class="col-lg-6 mapholder">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1503.7308968203647!2d17.923482365322176!3d50.664931893443644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710530f9ef667e3%3A0xea142c993c4b0ffb!2sTEB%20Edukacja!5e0!3m2!1spl!2spl!4v1702068272619!5m2!1spl!2spl"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <!--info o programie -->
-    <section class="row program">
+    <section class="row program" id="program">
         <div class="col-lg-12 stitle">
             <h1>PROGRAM</h1>
             <span>lorem ipsum</span>
         </div>
         <div class="col-lg-12 program-holder">
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Prelekcje</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Konkurs Cosplay</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Wystawcy</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Turniej UNO</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Fotostudio</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Streaming</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
+                <h3>Goście Cosplayowi</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
                     fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
                     harum obcaecati recusandae reiciendis rerum?</span>
             </div>
-            <div class="pcard">
+            <div class="pcard hidden">
                 <img src="/static/chalkboard-user-solid.svg">
-                <h3>Program title</h3>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda consequatur et
-                    fugit numquam, odit provident quod ut. Accusantium architecto autem ducimus esse facilis fugit
-                    harum obcaecati recusandae reiciendis rerum?</span>
+                <h3>Przewodniczący</h3>
+                <span>Jedyny w swoim rodzaju (przyszły) przewodniczący Samorządu Uczniowskiego TEB Technikum i Liceum Opole</span>
             </div>
         </div>
     </section>
 
-    <section class="row about_orgs">
+    <section class="row about_orgs" id="orgs">
         <div class="col-lg-12 stitle dark">
             <h1>ORGANIZATORZY</h1>
             <span>lorem ipsum</span>
         </div>
-        <div class="col-lg-6 col-md-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Adam <span>Budzowski</span></h1>
-                <span>lorem ipsum</span>
+                <span>Dyrektor naczelny</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -202,10 +203,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 col-md-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
-                <h1>Adam <span>Budzowski</span></h1>
-                <span>lorem ipsum</span>
+                <h1>Julian <span>Jaros</span></h1>
+                <span>Zastępca dyrektora | Koordynator obsługi | Technik</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -213,11 +214,11 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <!--
-        <div class="col-lg-6 orgcard">
+
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Agnieszka <span>Kocoń</span></h1>
-                <span>lorem ipsum</span>
+                <span>Specjalistka ds. Prelegentów | Streamerka</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -225,10 +226,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
                 <h1>Bartosz <span>Kobyłczyk</span></h1>
-                <span>lorem ipsum</span>
+                <span>Przedstawiciel sztabu WOŚP Opole | Koordynator medyczny</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -236,10 +237,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Denis <span>Rzyszka</span></h1>
-                <span>lorem ipsum</span>
+                <span>Specjalista ds. planszówek | Steve z minecraft</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -247,10 +248,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
                 <h1>Magda <span>Żołubak</span></h1>
-                <span>lorem ipsum</span>
+                <span>Przedstawicielka sztabu WOŚP Opole | Koordynator medyczny</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -258,10 +259,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Jakub <span>Sytnik</span></h1>
-                <span>lorem ipsum</span>
+                <span>Specjalista ds. Grafiki komputerowej | Technik</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -269,10 +270,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
                 <h1>Kamila <span>Wróblewska</span></h1>
-                <span>lorem ipsum</span>
+                <span>Koordynatorka ds. konkursu cosplay</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -280,10 +281,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Kasia <span>Szostak</span></h1>
-                <span>lorem ipsum</span>
+                <span>Specjalistka ds. Prelegentów | Fotograf cosplay</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -291,10 +292,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
                 <h1>Oliwia <span>Turek</span></h1>
-                <span>lorem ipsum</span>
+                <span>Zastępca koordynatora ds. konkursu cosplay</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -302,10 +303,10 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content l">
             <div>
                 <h1>Przemysław <span>Marenin</span></h1>
-                <span>lorem ipsum</span>
+                <span>Mistrz Ceremonii | Prowadzący Just Dance</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
@@ -313,32 +314,48 @@
             </div>
             <img src="/static/kitagawa.png">
         </div>
-        <div class="col-lg-6 orgcard">
+        <div class="col-lg-6 col-md-6 orgcard hidden-content r">
             <div>
                 <h1>Weronika <span>Policht</span></h1>
-                <span>lorem ipsum</span>
+                <span>Specjalistka ds. mediów społecznościowych</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores autem, dicta, ducimus ea
                     eius
                     enim fuga harum labore, laborum neque pariatur perferendis praesentium repellat repudiandae suscipit
                     tempora voluptates voluptatibus.</p>
             </div>
             <img src="/static/kitagawa.png">
-        </div>-->
+        </div>
     </section>
 
     <!--dokumenty-->
-    <section class="row">
+    <section class="row" id="documents">
         <div class="col-lg-12 stitle">
             <h1>REGULAMINY I ZGODY</h1>
             <span>lorem ipsum</span>
         </div>
         <div class="col-lg-12 documents">
-            <div class="doccard"><h5>Regulamin wydarzenia</h5></div>
+            <div class="doccard">
+                <h5>Regulamin wydarzenia</h5>
+            </div>
             <div class="doccard"><h5>Regulamin konkursu cosplay</h5></div>
             <div class="doccard"><h5>Regulamin wystawców</h5></div>
-            <div class="doccard"><h5>Zgoda na nocleg</h5></div>
+            <div class="doccard">
+                <h5>Zgoda na nocleg</h5>
+                <span>Nocleg jest przewidziany wyłącznie dla: Prelegentów, gości specjalnych, uczestników konkursu cosplay oraz obsługi wydarzenia</span>
+            </div>
         </div>
     </section>
+
+    <footer class="row">
+        <div class="col-lg-12 footer">
+            <p>WOŚP~CON 2024 jest organizowany przez esport.casa, Liceum i Technikum TEB Opole oraz wyżej wymienionych
+                organizatorów.<br>Właścicielem niniejszej strony jest esport.casa. Wszelkie prawa zastrzeżone.
+                <br>
+                Strona wykonana i zarządzana przez
+                <a class="purpleglow" href="https://julianjaros.pl" target="_blank" rel="noreferrer noopener">Julian
+                    Jaros</a> dla esport.casa</p>
+        </div>
+    </footer>
 </div>
 
 </body>
