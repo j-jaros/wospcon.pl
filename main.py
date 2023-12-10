@@ -20,4 +20,6 @@ def documents(docname=None):
             return flask.send_from_directory("./documents/", f"./{docname}")
         except Exception as ex:
             return "Plik nie istnieje. Przepraszamy!"
+
+
 waitress.serve(app, host='127.0.0.1', port=3002)
