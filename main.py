@@ -8,7 +8,5 @@ app = flask.Flask(__name__, static_url_path='/static')
 def index():
     return flask.render_template("index.html")
 
-
-app.run(host='0.0.0.0', port=80)
-#waitress.serve(app, host='0.0.0.0', port=80, debug=True)
+waitress.serve(app, host='127.0.0.1', port=3002)
 
