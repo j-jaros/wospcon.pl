@@ -230,14 +230,15 @@ body {
     background-color: #171d21;
     color: #e1e1e1;
     border-collapse: collapse;
-    padding: 0 100px;
+    padding: 100px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     overflow-y: hidden;
 }
 
 .orgcard img {
-    height: 50%;
+    width: 100%;
+    max-width: 100%;
     aspect-ratio: 1/1;
 }
 
@@ -427,6 +428,16 @@ footer {
 
     .orgcard p {
         font-size: 20px;
+    }
+
+    .orgcard {
+        padding: 50px 50px;
+    }
+
+    .orgcard img {
+        height: 90%;
+        width: unset;
+        aspect-ratio: 1/1;
     }
 
     .welcome_section h1 {
