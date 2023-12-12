@@ -4,6 +4,11 @@ import waitress
 app = flask.Flask(__name__, static_url_path='/static')
 
 
+@app.errorhandler(404)
+def reroute_to_index():
+    return flask.redirect("/")
+
+
 @app.route("/")
 def index():
     return flask.render_template("index.html")
