@@ -1,4 +1,6 @@
 window.onload = async () => {
+    console.log(window.screen.height,
+window.screen.width)
     const hidden_by_default = document.querySelectorAll('.hidden, .stitle *, .hidden-content')
     hidden_by_default.forEach((el) => scroll_observer.observe(el))
 }

@@ -220,6 +220,10 @@ body {
     animation: rainbow_box_shadow infinite linear 2s alternate-reverse;
 }
 
+.pcard h1 {
+    text-align: center;
+}
+
 .pcard img {
     width: 50%;
     aspect-ratio: 1/1;
@@ -397,6 +401,7 @@ footer {
     }
 }
 
+/*queryselectory zrobione (nie)najpiekniej*/
 @media only screen and (max-width: 1700px) {
     .orgcard {
         padding: 0 70px;
@@ -411,8 +416,26 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1440px){
+    .program-holder {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 100px 50px;
+    }
+
+    .orgcard {
+        padding: 50px 100px;
+    }
+
+    .orgcard img {
+        height: 90%;
+        width: unset;
+        aspect-ratio: 1/1;
+    }
+
+}
+
 /*pod mobilki*/
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 768px) {
     .program-holder {
         grid-template-columns: 1fr;
         padding: 100px 50px;
@@ -453,6 +476,17 @@ footer {
     .program-holder {
         grid-template-columns: 1fr 1fr;
         padding: 100px 100px;
+    }
+}
+
+@media only screen and (min-width: 768px ) and (max-width: 1200px) {
+    .orgcard img {
+        height: 90%;
+        width: unset;
+        aspect-ratio: 1/1;
+    }
+    .orgcard {
+        padding: 50px 50px;
     }
 }
 
