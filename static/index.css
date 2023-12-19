@@ -438,6 +438,10 @@ footer {
 
 /*pod mobilki*/
 @media only screen and (max-width: 768px) {
+    body {
+        background-image: url("/static/mobile_bg.png");
+    }
+
     .program-holder {
         grid-template-columns: 1fr;
         padding: 100px 50px;
