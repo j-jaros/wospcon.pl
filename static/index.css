@@ -156,7 +156,7 @@ body {
     color: #e1e1e1;
 }
 
-.stitle h1 {
+.stitle h1, .stitle h3 {
     margin: 0;
     font-family: 'Kalam', cursive;
 }
@@ -228,6 +228,38 @@ body {
     width: 50%;
     aspect-ratio: 1/1;
     max-width: 150px;
+    border-radius: 10px;
+}
+
+.pcard.speaker {
+    min-height: 40vh;
+    height: fit-content;
+    background-color: #171d21;
+    color: #e1e1e1;
+    width: 100%;
+    text-align: center;
+}
+
+span.warn {
+    color: red;
+    font-style: italic;
+}
+
+.pcard.speaker h3 {
+    margin: 10px 0 5px 0
+}
+
+.pcard.speaker p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.pcard.speaker span {
+    font-style: italic;
+}
+
+.program-holder .splitter {
+    width: 100vw;
 }
 
 .orgcard {
