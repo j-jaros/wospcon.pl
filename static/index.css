@@ -199,7 +199,6 @@ body {
 }
 
 .program-holder {
-    min-height: 100vh;
     height: fit-content;
     background-color: #e1e1e1;
     display: grid;
@@ -544,6 +543,15 @@ footer {
 
     .mapholder {
         height: 400px;
+    }
+
+    .lecture-table-holder {
+        padding: 0 10px;
+    }
+
+    .lecture-table-holder td, .lecture-table-holder th {
+        font-size: 10px;
+        padding: 2px;
     }
 }
 
