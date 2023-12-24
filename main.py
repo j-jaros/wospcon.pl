@@ -46,7 +46,7 @@ def index():
 
 @app.route("/favicon.ico")
 def favicon():
-    return 'nie ma favicona :)'
+    return flask.send_from_directory("./static", "favicon.png")
 
 
 @app.route("/documents/<docname>")
@@ -88,12 +88,12 @@ def connect_to_database():
 
 
 def log(req_obj, type, args=None):
-    print(f"[{time.time()}] IP: {req_obj.host} | TYPE: {type} | ARGS: {args}")
+    print(f"[{time.time()}] IP: {req_obj.environ['REMOTE_ADDR']} | TYPE: {type} | ARGS: {args}")
     try:
         if connection is None or cursor is None:
             return
 
-        socket = req_obj.host
+        socket = req_obj.environ['REMOTE_ADDR']
         sanitized_args = base64.b64encode(bytes(str(args), 'utf-8'))
         cursor.execute("insert into entry_log (id, socket, type, time, args) values (%s,%s,%s,%s, %s)",
                        (0, socket, type, time.time(), sanitized_args if args is not None else None))
