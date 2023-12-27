@@ -13,7 +13,7 @@ app = flask.Flask(__name__, static_url_path='/static', )
 
 @app.errorhandler(404)
 def notfound_handler(e):
-    log(flask.request, 'error', args=str(e))
+    log(flask.request, 'resource-not-found', args=str(flask.request.url))
     if flask.request.method != "GET":
         return flask.jsonify('Zasob nie zostal znaleziony')
 
@@ -22,7 +22,7 @@ def notfound_handler(e):
 
 @app.errorhandler(405)
 def methodunallowed_handler(e):
-    log(flask.request, 'error', args=str(traceback.format_exc()))
+    log(flask.request, 'unallowed-method', args=str(traceback.format_exc()))
     if flask.request.method != "GET":
         return flask.jsonify(f'Metoda {flask.request.method} jest niedozwolona')
 
@@ -76,7 +76,7 @@ def connect_to_database():
             host="127.0.0.1",
             port=3306,
             user='root',
-            password='',
+            password='root',
             database='wospcon'
         )
         cursor = connection.cursor()
@@ -93,7 +93,7 @@ def log(req_obj, type, args=None):
         if connection is None or cursor is None:
             return
 
-        socket = req_obj.environ['REMOTE_ADDR']
+        socket = req_obj.access_route[-1]
         sanitized_args = base64.b64encode(bytes(str(args), 'utf-8'))
         cursor.execute("insert into entry_log (id, socket, type, time, args) values (%s,%s,%s,%s, %s)",
                        (0, socket, type, time.time(), sanitized_args if args is not None else None))

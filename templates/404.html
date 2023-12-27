@@ -10,10 +10,12 @@
 <body>
 
 <h1>Nie znaleziono zasobu</h1>
-<p>Przepraszamy! Wygląda na to, że próbujesz uzyskać dostęp, do zasobu, którego nie ma na serwerze. Jeżeli uważasz, że to
+<p>Przepraszamy! Wygląda na to, że próbujesz uzyskać dostęp, do zasobu, którego nie ma na serwerze. Jeżeli uważasz, że
+    to
     błąd, prosimy o kontakt pod adresem <a
             href="mailto:julian.jaros@teb.edu.pl">julian.jaros@teb.edu.pl</a>.<br><br>Dziękuję!<br>~ Julian
 </p>
+<a href="https://wospcon.pl" rel="noreferrer noopener">Powrót na stronę główną</a>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -31,18 +33,25 @@
         overflow: hidden;
     }
 
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
     h1 {
         font-family: 'Kalam', cursive;
     }
 
     p {
-        font-family: 'Roboto', sans-serif;
         width: 50%;
     }
 
-    a {
+    p > a {
         color: #7b0dcc;
         text-shadow: 0px 0px 10px #7b0dcc;
+    }
+
+    a {
+        color: #e1e1e1;
     }
 
     @media only screen and (max-width: 768px) {
