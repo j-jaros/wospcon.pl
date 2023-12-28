@@ -1,3 +1,11 @@
+<!--
+Strona stworzona i zarządzana przez Julian Jaros (https://julianjaros.pl) dla esport.casa
+
+Attributions:
+Instagram logo icons created by Pixel perfect - Flaticon: https://www.flaticon.com/free-icons/instagram-logo
+Facebook icons created by Pixel perfect - Flaticon: https://www.flaticon.com/free-icons/facebook
+-->
+
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WOŚPCON 2024</title>
     <meta name="title" content="WOŚPCON 2024">
-    <meta name="description" content="Oficjalna strona WOŚPconu! Zapraszamy 20 stycznia 2024 roku od 10:00 do 21:00 w TEB Edukacja Opole!">
+    <meta name="description"
+          content="Oficjalna strona WOŚPconu! Zapraszamy 20 stycznia 2024 roku od 10:00 do 21:00 w TEB Edukacja Opole!">
     <meta name="keywords" content="wosp, wospcon, opole, cosplay, wosp strona">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -21,7 +30,6 @@
             crossorigin="anonymous" defer></script>
 
     <link href="/static/index.css" rel="stylesheet" type="text/css">
-    <script defer src="/static/index.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -50,6 +58,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#speakers">Prelekcje</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exhibitors">Wystawcy</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#documents">Regulaminy i zgody</a>
@@ -319,6 +330,7 @@
                 <img src="/static/kitagawa.png">
                 <h3>AMDER</h3>
                 <p>Na Zdrowie - czyli o zdrowiu w anime</p>
+                <span class="warn">PRELEKCJA +16</span>
             </div>
             <div class="pcard speaker hidden">
                 <img src="/static/kitagawa.png">
@@ -411,7 +423,8 @@
                 <tbody>
                 <tr>
                     <td>3.07</td>
-                    <td>Na Zdrowie - czyli o zdrowiu w anime</td>
+                    <td class="age-restricion">Na Zdrowie - czyli o zdrowiu w anime<br><span
+                            class="age-restricion">+16</span></td>
                     <td>Dungeons and Dragons dla początkujących</td>
                     <td>Zapomniana bogini Sumeru - czyli Lore The Greater Lord Rukkhadevata.</td>
                     <td>I have two wolfs inside of me (czyli o omegaverse)</td>
@@ -446,6 +459,64 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+    </section>
+
+    <section class="row" id="exhibitors">
+        <div class="col-lg-12 stitle">
+            <h1>WYSTAWCY</h1>
+        </div>
+        <div class="col-lg-12 exhibitors">
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Tsuru</h3>
+                <a><img></a>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Octopus Corner</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Kill the corpse</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Moonlight Atelier</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Shiru Sunflower</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Soppo</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Amethyst Empire</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Fox and the shiny rocks</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Anime craft</h3>
+                <span>instagram / facebook</span>
+            </div>
+            <div class="pcard speaker hidden">
+                <img src="/static/kitagawa.png">
+                <h3>Art bunker</h3>
+                <span>instagram / facebook</span>
+            </div>
         </div>
     </section>
 
@@ -491,6 +562,6 @@
         </div>
     </footer>
 </div>
-
+<script src="/static/index.js"></script>
 </body>
 </html>

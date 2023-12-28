@@ -25,7 +25,7 @@
 }
 
 .navbar * {
-    color: #e1e1e1 !important;
+    color: #e5e5e5 !important;
 }
 
 .nav-item {
@@ -65,7 +65,7 @@ body {
 
 .welcome_section {
     background-color: rgba(0, 0, 0, 0.7);
-    color: #e1e1e1;
+    color: #e5e5e5;
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
@@ -118,7 +118,7 @@ body {
 
 .desc {
     height: 50vh;
-    background-color: #e1e1e1;
+    background-color: #e5e5e5;
 }
 
 .desc .col-lg-4 {
@@ -134,7 +134,7 @@ body {
 
 #until table {
     width: 100%;
-    color: #e1e1e1;
+    color: #e5e5e5;
     text-align: center;
 }
 
@@ -146,14 +146,14 @@ body {
 .stitle {
     height: fit-content;
     text-align: center;
-    background-color: #e1e1e1;
+    background-color: #e5e5e5;
     color: #25303b;
     padding: 50px 0 10px;
 }
 
 .stitle.dark {
     background-color: #171d21;
-    color: #e1e1e1;
+    color: #e5e5e5;
 }
 
 .stitle h1, .stitle h3 {
@@ -186,7 +186,7 @@ body {
 }
 
 .mapholder {
-    background-color: #e1e1e1;
+    background-color: #e5e5e5;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -200,7 +200,7 @@ body {
 
 .program-holder {
     height: fit-content;
-    background-color: #e1e1e1;
+    background-color: #e5e5e5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -234,7 +234,7 @@ body {
     min-height: 40vh;
     height: fit-content;
     background-color: #171d21;
-    color: #e1e1e1;
+    color: #e5e5e5;
     width: 100%;
     text-align: center;
 }
@@ -263,7 +263,7 @@ span.warn {
 
 .orgcard {
     background-color: #171d21;
-    color: #e1e1e1;
+    color: #e5e5e5;
     border-collapse: collapse;
     padding: 100px 50px 100px 100px;
     display: grid;
@@ -293,7 +293,7 @@ span.warn {
 }
 
 .documents {
-    background-color: #e1e1e1;
+    background-color: #e5e5e5;
     min-height: 50vh;
     height: fit-content;
     padding: 100px 50px;
@@ -407,9 +407,9 @@ footer {
 }
 
 .lec-tab td{
-    border: 1px solid #e1e1e1;
+    border: 1px solid #e5e5e5;
     padding: 10px;
-    color: #e1e1e1;
+    color: #e5e5e5;
 }
 
 .lec-tab td.age-restricion {
@@ -421,8 +421,8 @@ footer {
 }
 
 .lec-tab th {
-    border: 1px solid #e1e1e1;
-    color: #e1e1e1;
+    border: 1px solid #e5e5e5;
+    color: #e5e5e5;
 }
 
 #lecture-table>.stitle span>span {
@@ -431,6 +431,24 @@ footer {
 
 #lecture-table>.stitle span {
     font-style: italic;
+}
+
+.exhibitors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 20px;
+
+    padding: 20px 150px;
+    background-color: #e5e5e5;
+}
+
+.exhibitors .pcard {
+    min-height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes rainbow_box_shadow {
