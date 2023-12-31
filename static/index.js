@@ -1,6 +1,5 @@
 window.onload = async () => {
-    console.log(window.screen.height,
-window.screen.width)
+    console.log(window.screen.height, window.screen.width)
     const hidden_by_default = document.querySelectorAll('.hidden, .stitle *, .hidden-content')
     hidden_by_default.forEach((el) => scroll_observer.observe(el))
 }
@@ -31,9 +30,21 @@ async function countdown() {
         minutes_holder.textContent = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         seconds_holder.textContent = Math.floor((diff % (1000 * 60)) / 1000);
 
-        await new Promise(r=>setTimeout(r, 1000))
+        await new Promise(r => setTimeout(r, 1000))
 
     }
 }
+
+const go_back_arrow = document.getElementById("go_back")
+console.log(go_back_arrow)
+new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.intersectionRatio < 0.9) {
+            go_back_arrow.classList.add('visible')
+        } else {
+            go_back_arrow.classList.remove('visible')
+        }
+    });
+}, {threshold: 0.9}).observe(document.querySelector("#start>h1"))
 
 countdown()

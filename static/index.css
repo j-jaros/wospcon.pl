@@ -57,16 +57,62 @@
     text-align: center;
 }
 
-body {
-    background-image: url("/static/bg1.png");
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
 
 .welcome_section {
     background-color: rgba(0, 0, 0, 0.7);
     color: #e5e5e5;
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+#go_back {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 10;
+    scale: 1.2;
+    pointer-events: none;
+    transition: opacity .5s ease;
+    opacity: 0;
+}
+
+#go_back.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.cta {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 30px;
+    cursor: pointer;
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+.cta img {
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin-left: 10px;
+    animation: arrow_animation .5s ease-in-out alternate infinite;
+}
+
+@keyframes arrow_animation {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -10px;
+    }
+}
+
+body {
+    background-image: url("/static/bg1.webp");
+    background-attachment: fixed;
+    background-size: cover
 }
 
 .hidden, .visible {
@@ -212,7 +258,7 @@ body {
     width: 100%;
     min-height: 30vh;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 30px 50px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -231,12 +277,16 @@ body {
 }
 
 .pcard.speaker {
-    min-height: 40vh;
+    min-height: 200px;
     height: fit-content;
     background-color: #171d21;
     color: #e5e5e5;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 10px 20px;
 }
 
 span.warn {
@@ -293,12 +343,12 @@ span.warn {
 }
 
 .documents {
-    background-color: #e5e5e5;
+    background-color: #171d21;
     min-height: 50vh;
     height: fit-content;
-    padding: 100px 50px;
+    padding: 100px 200px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
 }
 
@@ -397,7 +447,7 @@ footer {
 }
 
 .lecture-table-holder {
-    padding: 20px 150px;
+    padding: 20px 200px;
     background-color: #171d21;
 }
 
@@ -406,7 +456,7 @@ footer {
     margin-bottom: 100px;
 }
 
-.lec-tab td{
+.lec-tab td {
     border: 1px solid #e5e5e5;
     padding: 10px;
     color: #e5e5e5;
@@ -416,7 +466,7 @@ footer {
     border: 2px solid red;
 }
 
-.lec-tab td>.age-restricion {
+.lec-tab td > .age-restricion {
     color: red;
 }
 
@@ -425,11 +475,11 @@ footer {
     color: #e5e5e5;
 }
 
-#lecture-table>.stitle span>span {
+#lecture-table > .stitle span > span {
     color: red;
 }
 
-#lecture-table>.stitle span {
+#lecture-table > .stitle span {
     font-style: italic;
 }
 
@@ -439,16 +489,35 @@ footer {
     row-gap: 50px;
     column-gap: 20px;
 
-    padding: 20px 150px;
+    padding: 50px 200px;
     background-color: #e5e5e5;
 }
 
 .exhibitors .pcard {
-    min-height: 300px;
+    min-height: 270px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    padding: 20px 30px;
+}
+
+.exhibitors .pcard > img {
+    max-width: 95%;
+}
+
+.exhibitors .sm-holder {
+    width: 100%;
+    height: 30px;
+}
+
+.exhibitors .pcard a > img {
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+
+.exhibitors .pcard a {
+    display: inline-block;
 }
 
 @keyframes rainbow_box_shadow {
@@ -505,7 +574,7 @@ footer {
 }
 
 @media only screen and (max-width: 1440px) {
-    .program-holder {
+    .program-holder, .exhibitors {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 100px 50px;
     }
@@ -524,7 +593,7 @@ footer {
 /*pod mobilki*/
 @media only screen and (max-width: 768px) {
     body {
-        background-image: url("/static/mobile_bg.png");
+        background-image: url("/static/mobile_bg.webp");
     }
 
     .program-holder {
@@ -532,8 +601,9 @@ footer {
         padding: 100px 50px;
     }
 
-    .documents {
+    .documents, .exhibitors {
         grid-template-columns: 1fr;
+        padding: 100px 50px;
     }
 
     .desc {
@@ -578,7 +648,7 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    .program-holder {
+    .program-holder, .exhibitors {
         grid-template-columns: 1fr 1fr;
         padding: 100px 100px;
     }
