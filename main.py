@@ -76,7 +76,7 @@ def connect_to_database():
             host="127.0.0.1",
             port=3306,
             user='root',
-            password='root',
+            password='',
             database='wospcon'
         )
         cursor = connection.cursor()
@@ -87,20 +87,40 @@ def connect_to_database():
         cursor = None
 
 
-def log(req_obj, type, args=None):
-    print(f"[{time.time()}] IP: {req_obj.environ['REMOTE_ADDR']} | TYPE: {type} | ARGS: {args}")
-    try:
-        if connection is None or cursor is None:
-            return
+logs = []
 
-        socket = req_obj.access_route[-1]
+
+def dump_logs():
+    while True:
+        time.sleep(5)
+        print(logs)
+        log_len = len(logs)
+        if log_len != 0:
+            try:
+                if connection is None or cursor is None:
+                    pass
+                else:
+                    cursor.executemany("insert into entry_log (id, socket, type, time, args) values (0 ,%s,%s,%s,%s)",
+                                       logs)
+
+                    # logi usuwam w ten sposob dla pewnosci ze nie usune loga ktory jeszcze nie zostal zapisany do bazy danych
+                    del logs[0:log_len]
+            except Exception as ex:
+                print(f"{time.time()} Nie mozna zapisac loga: {ex}")
+
+
+def log(req_obj, type, args=None):
+    sanitized_args = None
+    if args is not None:
         sanitized_args = base64.b64encode(bytes(str(args), 'utf-8'))
-        cursor.execute("insert into entry_log (id, socket, type, time, args) values (%s,%s,%s,%s, %s)",
-                       (0, socket, type, time.time(), sanitized_args if args is not None else None))
-    except Exception as ex:
-        print(f"{time.time()} Nie mozna zapisac loga: {ex}")
+
+    socket = req_obj.access_route[-1]
+
+    print(f"[{time.time()}] IP: {socket} | TYPE: {type} | ARGS: {args}")
+    logs.append((socket, type, time.time(), sanitized_args))
 
 
 threading.Thread(target=connect_to_database).start()
+threading.Thread(target=dump_logs).start()
 
 waitress.serve(app, host='0.0.0.0', port=3002)
