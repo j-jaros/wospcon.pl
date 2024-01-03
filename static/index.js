@@ -15,7 +15,7 @@ const scroll_observer = new IntersectionObserver((entries) => {
 }, {threshold: 0.4});
 
 async function countdown() {
-    const target = new Date("01/19/2024 10:00")
+    const target = new Date("01/20/2024 10:00")
 
     const day_holder = document.querySelector("#until .digits td:first-of-type")
     const hour_holder = document.querySelector("#until .digits td:nth-of-type(2)")
