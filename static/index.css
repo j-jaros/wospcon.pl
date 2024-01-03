@@ -620,7 +620,7 @@ footer {
     }
 
     .orgcard img {
-        height: 90%;
+        height: 300px;
         width: unset;
         aspect-ratio: 1/1;
     }
