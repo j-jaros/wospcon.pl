@@ -4,15 +4,14 @@ window.onload = async () => {
     hidden_by_default.forEach((el) => scroll_observer.observe(el))
 }
 
-
 const scroll_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.4) {
+        if (entry.intersectionRatio >= 0.3) {
             entry.target.classList.replace("hidden", 'visible')
             entry.target.classList.replace("hidden-content", 'hidden-content-show')
         }
     });
-}, {threshold: 0.4});
+}, {threshold: 0.3});
 
 async function countdown() {
     const target = new Date("01/20/2024 10:00")
