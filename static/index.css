@@ -22,6 +22,7 @@
     position: fixed;
     top: 0;
     z-index: 3;
+    padding: 0 50px;
 }
 
 .navbar * {
@@ -594,6 +595,10 @@ footer {
 @media only screen and (max-width: 768px) {
     body {
         background-image: url("/static/mobile_bg.webp");
+    }
+
+    .navbar {
+        padding: 0 10px;
     }
 
     .program-holder {
