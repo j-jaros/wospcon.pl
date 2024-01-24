@@ -1,3 +1,8 @@
+const day_holder = document.querySelector("#until .digits td:first-of-type")
+const hour_holder = document.querySelector("#until .digits td:nth-of-type(2)")
+const minutes_holder = document.querySelector("#until .digits td:nth-of-type(3)")
+const seconds_holder = document.querySelector("#until .digits td:nth-of-type(4)")
+
 window.onload = async () => {
     console.log(window.screen.height, window.screen.width)
     const hidden_by_default = document.querySelectorAll('.hidden, .stitle *, .hidden-content')
@@ -16,13 +21,12 @@ const scroll_observer = new IntersectionObserver((entries) => {
 async function countdown() {
     const target = new Date("01/20/2024 10:00")
 
-    const day_holder = document.querySelector("#until .digits td:first-of-type")
-    const hour_holder = document.querySelector("#until .digits td:nth-of-type(2)")
-    const minutes_holder = document.querySelector("#until .digits td:nth-of-type(3)")
-    const seconds_holder = document.querySelector("#until .digits td:nth-of-type(4)")
-
     while (true) {
         const diff = target - new Date()
+        if (diff <= 0) {
+            zero_countdown()
+            return
+        }
 
         day_holder.textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
         hour_holder.textContent = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -32,6 +36,13 @@ async function countdown() {
         await new Promise(r => setTimeout(r, 1000))
 
     }
+}
+
+function zero_countdown() {
+    day_holder.textContent = 0
+    hour_holder.textContent = 0
+    minutes_holder.textContent = 0
+    seconds_holder.textContent = 0
 }
 
 const go_back_arrow = document.getElementById("go_back")
