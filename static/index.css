@@ -13,11 +13,16 @@ footer {
 }
 
 .main {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     background-color: #171d21;
     display: flex;
     flex-flow: column;
     align-items: center;
+}
+
+.main * {
+    color: #e5e5e5;
 }
 
 .main>p{
@@ -26,7 +31,38 @@ footer {
     margin-top: 20px;
 }
 
+.special-thanks {
+    max-width: 600px;
+}
+.special-thanks span {
+    max-width: 70%;
+}
+
 .main>img {
     width: 200px;
     max-width: 95%;
+}
+
+.rly_thx {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.special-thanks section {
+    margin: 30px 0;
+}
+
+.special-thanks a {
+    display: block;
+}
+
+.special-thanks section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.special-thanks section li {
+    font-style: italic;
+    list-style: '- ';
 }
