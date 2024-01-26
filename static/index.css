@@ -19,6 +19,7 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding: 50px 0;
 }
 
 .main * {
@@ -60,9 +61,4 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
-}
-
-.special-thanks section li {
-    font-style: italic;
-    list-style: '- ';
 }
